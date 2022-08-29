@@ -14,9 +14,11 @@
 .header {
     padding: 2% 6%;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.logo {
+    flex: 1;
 }
 
 .logo h1 {
@@ -38,4 +40,50 @@
 #menu li a {
     text-decoration: none;
     color: #fff;
+}
+
+.header .fa-solid {
+    color: #fff;
+    font-weight: 600;
+    font-size: 22px;
+}
+
+.header .fa-bars,
+.header .fa-xmark {
+    display: none;
+}
+
+@media(max-width: 768px) {
+    .header {
+        flex-direction: column;
+    }
+
+    #menu {
+        position: fixed;
+        top: 0;
+        right: -250px;
+        width: 250px;
+        height: 100vh;
+        background-color: rgb(2, 2, 73);
+        transition: 1s;
+    }
+
+    .logo {
+        flex: 0;
+    }
+
+    #menu li {
+        display: block;
+        margin: 10px;
+    }
+
+    .header .fa-xmark {
+        display: block;
+        margin: 10px;
+    }
+
+    .header .fa-bars {
+        display: inline-block;
+        text-align: right;
+    }
 }
